@@ -16,6 +16,10 @@ class Student
     DB[:conn].execute(sql)
   end
 
+  def self.drop_table
+    DB[:conn].execute("DROP TABLE students")
+  end
+
   def initialize(name, grade, id = nil)
     @name = name
     @grade = grade
